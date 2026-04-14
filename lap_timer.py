@@ -31,38 +31,35 @@ def add_lap(timer, time):
 while True:
     time = []
     time = float(input())
+    time.append(time)
     if time == None:
         break
-    time = float(time)
-    time.append(time)
     timer = len(time)
     if timer > timer['max']:
         print("No se pueden agregar mas vueltas")
-        break
-
+        
 def count(timer):
     """
     Retorna el numero de vueltas agregadas.
     """
-    # TODO: Implementar
-    pass
-
+    # TODO:
+    return timer
 
 def cumulative_time(timer):
     """
     Retorna el tiempo acumulado de todas las vueltas.
     """
-    # TODO: Implementar
-    pass
-
+    # TODO:
+    timer = sum(time)
+    return timer['total']
 
 def format_laps(timer):
     """
     Retorna una representacion en cadena de los tiempos.
     Formato: [t1, t2, t3, ..., tn]
     """
-    # TODO: Implementar
-    pass
+    # TODO:
+    return str(time)
 
 
 def fastest_lap(timer):
