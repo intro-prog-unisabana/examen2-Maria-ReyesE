@@ -11,8 +11,15 @@ def init(max_laps):
     """
     Crea y retorna un diccionario para almacenar hasta max_laps vueltas.
     """
-    # TODO: Implementar
-    pass
+    #TODO:
+    max_laps = int(max_laps)
+    max_laps = {'max': max_laps}
+    
+    return max_laps
+
+#Verificación 
+#max_laps = init(10)
+#print(max_laps)
 
 
 def add_lap(timer, time):
@@ -20,9 +27,16 @@ def add_lap(timer, time):
     Agrega una nueva vuelta con el tiempo especificado.
     Retorna el diccionario modificado.
     """
-    # TODO: Implementar
-    pass
-
+    # TODO:
+    timer = timer.get('times', [])
+    if len(timer['times']) < timer['max']:
+            timer['times'].append(time)
+            timer['total'] += time
+    else:
+            print("No se pueden agregar mas vueltas. Maximo alcanzado.")
+    
+    
+        
 
 def count(timer):
     """
