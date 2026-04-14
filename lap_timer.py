@@ -28,15 +28,17 @@ def add_lap(timer, time):
     Retorna el diccionario modificado.
     """
     # TODO:
-    timer = timer.get('times', [])
-    if len(timer['times']) < timer['max']:
-            timer['times'].append(time)
-            timer['total'] += time
-    else:
-            print("No se pueden agregar mas vueltas. Maximo alcanzado.")
-    
-    
-        
+while True:
+    time = []
+    time = float(input())
+    if time == None:
+        break
+    time = float(time)
+    time.append(time)
+    timer = len(time)
+    if timer > timer['max']:
+        print("No se pueden agregar mas vueltas")
+        break
 
 def count(timer):
     """
